@@ -11,6 +11,10 @@
     color: #cf0a0a;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     line-height: 1.6;
     color: #333;
@@ -162,7 +166,6 @@ nav ul li a.active {
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    /* 🔄 updated from 250px to 220px */
     gap: 25px;
 }
 
@@ -402,6 +405,7 @@ nav ul li a.active {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    flex-direction: column;
 }
 
 .category-filter a {
@@ -481,7 +485,7 @@ footer {
 }
 
 /* Responsive Styles */
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
     .product-grid {
         grid-template-columns: repeat(5, 1fr);
     }
